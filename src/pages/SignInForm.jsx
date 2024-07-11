@@ -1,11 +1,65 @@
-import { useState } from "react";
-import React from 'react'
+import { useState,useContext } from "react";
+import React from 'react';
+import { AuthContext } from '../context/AuthContext';
 
 export default function SignInForm() {
 
-  const [password, setPassword] = useState("");
+  
   const [showPassword, setShowPassword] = useState(false);
   const [isErrorShown, setIsErrorShown] = useState(false);
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+  const [loading, setLoading] = useState(false);
+  const { login } = useContext(AuthContext);
+
+  // const handleSubmit = (event) => {
+  //   event.preventDefault();
+  //   setLoading(true);
+  //   setError('');
+  //   // Handle form submission logic here
+  //   alert("yes");
+  //   console.log('Username:', username);
+  //   console.log('Password:', password);
+
+
+    
+  // };
+
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    setLoading(true);
+    setError('');
+
+    try {
+      const response = await fetch('https://dummyjson.com/auth/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          username: username,
+          password: password,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.message || 'Something went wrong');
+      }
+
+      login(data);
+      
+      console.log('Success:', data);
+      // Handle successful login response here (e.g., save token, redirect, etc.)
+    } catch (error) {
+      setError(error.message);
+    } finally {
+      setLoading(false);
+    }
+  };
 
   const toggleError = () => {
     alert("Dd");
@@ -19,17 +73,23 @@ export default function SignInForm() {
 
 {/* <!-- Right: Login Form --> */}
 <div class="lg:p-36 md:p-52 sm:20 p-8 w-full lg:w-1/2">
-  <h2 class="text-6xl font-semibold mb-4 text-left">Welcome back</h2>
-  <h4 class="text-1xl font-semibold mb-4 text-left">You need to be signed in to access the project dashboard.</h4>
+  {/* <h2 class="text-6xl font-semibold mb-4 text-left">Welcome back</h2>
+  <h4 class="text-1xl font-semibold mb-4 text-left">You need to be signed in to access the project dashboard.</h4> */}
   <form action="#" method="POST">
     {/* <!-- Username Input --> */}
     <div class="mb-4 ">
-      <label for="username" class="block text-gray-600 text-left mb-2 ">Email or username</label>
-      <input type="text" id="username" name="username" class="w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:border-blue-500" autocomplete="off" />
+      {/* <label for="username" class="block text-gray-600 text-left mb-2 ">Email or username</label> */}
+      <input   
+          type="text"
+          id="username"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+      
+       class="w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:border-blue-500" autocomplete="off" />
     </div>
     {/* <!-- Password Input --> */}
     <div class="mb-4">
-      <label for="password" class="block text-gray-600 text-left mb-2">Password</label>
+      {/* <label for="password" class="block text-gray-600 text-left mb-2">Password</label> */}
       {/* <input type="password" id="password" name="password" class="w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:border-blue-500" autocomplete="off" />
     */}
 
@@ -41,8 +101,13 @@ export default function SignInForm() {
     </div>
     <input class="pl-11 text-gray-800 pr-4 pr-11 py-2 border-gray-600 rounded-md focus:border-gray-400 focus:ring
 focus:ring-gray-800 ring-gray-400 ring focus:ring-offset-2 focus:ring-offset-white dark:border-gray-600 dark:bg-primary-darker
- dark:focus:ring-offset-dark-eval-1 block w-full" id="password"  name="password" required="required" autocomplete="new-password" placeholder="password" 
- type={ showPassword ? "text" : "password" }
+ dark:focus:ring-offset-dark-eval-1 block w-full"
+
+  name="password" required="required" 
+  id="password" value={password}  onChange={(e) => setPassword(e.target.value)}
+  autocomplete="new-password" placeholder="password" 
+  type={ showPassword ? "text" : "password" }
+  
   />
 
     
@@ -77,15 +142,16 @@ focus:ring-gray-800 ring-gray-400 ring focus:ring-offset-2 focus:ring-offset-whi
     {/* <!-- Forgot Password Link --> */}
     
     {/* <!-- Login Button --> */}
-    <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-md py-2 px-4 w-full">Login</button>
+    {/* <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-md py-2 px-4 w-full">Login</button> */}
+    <button type="submit" onClick={handleSubmit} class=" text-black font-semibold rounded-md py-2 px-4 w-full">Login</button>
   </form>
   {/* <!-- Sign up  Link --> */}
   <div class="mt-6 text-blue-500 text-center">
-    <a href="#" class="hover:underline">Sign in with Google</a>
+    {/* <a href="#" class="hover:underline">Sign in with Google</a> */}
   </div>
   {/* <!-- Sign up  Link --> */}
   <div class="mt-6 text-blue-500 text-center">
-    <a href="#" class="hover:underline">Haven’t joined yet? <span className='underline'>Sign in</span> </a>
+    {/* <a href="#" class="hover:underline">Haven’t joined yet? <span className='underline'>Sign in</span> </a> */}
   </div>
 </div>
 <div class="w-1/2 h-screen hidden lg:block">
