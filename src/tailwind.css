@@ -12,42 +12,47 @@
 @font-face {
     font-family: "PublicSans-Regular";
     font-weight: 400;
-    src: url("./assets/fonts/PublicSans-Regular.ttf") 
+    src: url("./assets/fonts/PublicSans-Regular.ttf")
 }
+
 @font-face {
     font-family: "PublicSans-Medium";
     font-weight: 500;
-    src: url("./assets/fonts/PublicSans-Medium.ttf") 
+    src: url("./assets/fonts/PublicSans-Medium.ttf")
 }
+
 @font-face {
     font-family: "PublicSans-thin";
     font-weight: 100;
-    src: url("./assets/fonts/PublicSans-Thin.ttf") 
+    src: url("./assets/fonts/PublicSans-Thin.ttf")
 }
+
 @font-face {
     font-family: "PublicSans-Light";
     font-weight: 300;
-    src: url("./assets/fonts/PublicSans-Light.ttf") 
+    src: url("./assets/fonts/PublicSans-Light.ttf")
 }
+
 @font-face {
     font-family: "Sora-SemiBold";
     font-weight: 600;
-    src: url("./assets/fonts/Sora-SemiBold.ttf") 
+    src: url("./assets/fonts/Sora-SemiBold.ttf")
 }
+
 @font-face {
     font-family: "Sora-Medium";
     font-weight: 400;
-    src: url("./assets/fonts/Sora-Medium.ttf") 
+    src: url("./assets/fonts/Sora-Medium.ttf")
 }
 
 
-.checkbox-forgot-label{
-    
-font-family: "PublicSans-Regular";
-font-size: 20px;
-font-weight: 400;
-line-height: 24px;
-text-align: left;
+.checkbox-forgot-label {
+
+    font-family: "PublicSans-Regular";
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
 
 }
 
@@ -58,6 +63,7 @@ text-align: left;
     line-height: 24px;
     text-align: right;
 }
+
 .custom-btn {
     font-family: "PublicSans-Regular";
     font-size: 20px;
@@ -67,7 +73,7 @@ text-align: left;
 
 }
 
- .custom-heading  {
+.custom-heading {
     /* //styleName: Headline 1; */
     font-family: "Sora-SemiBold";
     font-size: 64px;
@@ -75,7 +81,7 @@ text-align: left;
     line-height: 60px;
     letter-spacing: -0.015em;
     text-align: left;
-    
+
 }
 
 .custom-tagline {
@@ -93,27 +99,29 @@ text-align: left;
     line-height: 32px;
     text-align: left;
 }
+
 .sign-text a {
     color: black !important;
 }
-.sign-btn {
-width: Fill (421px)px;
-height: Fixed (48px)px;
-padding: 14px 12px 14px 12px;
-gap: 10px;
-border-radius: 2px 0px 0px 0px;
-border: 1px 0px 0px 0px;
-opacity: 0px;
-background: #50F89A;
-color: #005237;
-margin-bottom: 12px;
-font-family: "Sora-Medium";
-font-size: 16px;
-font-weight: 400;
-line-height: 18px;
-text-align: center;
 
+.sign-btn {
+    width: Fill (421px)px;
+    height: Fixed (48px)px;
+    padding: 14px 12px 14px 12px;
+    gap: 10px;
+    border-radius: 2px 0px 0px 0px;
+    border: 1px 0px 0px 0px;
+    opacity: 0px;
+    background: #50F89A;
+    color: #005237;
+    margin-bottom: 12px;
+    font-family: "Sora-Medium";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18px;
+    text-align: center;
 }
+
 .google-btn {
     width: Fill (421px)px;
     height: Fixed (48px)px;
