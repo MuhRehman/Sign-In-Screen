@@ -123,8 +123,9 @@
 }
 
 .google-btn {
-    width: Fill (421px)px;
-    height: Fixed (48px)px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
     padding: 14px 12px 14px 12px;
     gap: 10px;
     border-radius: 2px 0px 0px 0px;

@@ -19,7 +19,7 @@ export default function SignInForm() {
     setLoading(true);
     setError("");
      
-    // Validate inputs
+   
     if (username.trim() === '' || password.trim() === '') {
       setError('Both username and password are required.');
       setLoading(false);
@@ -64,16 +64,18 @@ export default function SignInForm() {
   return (
     <>
       <div class="bg-gray-100 flex justify-center items-center h-screen">
-        {/* <!-- Left: Image --> */}
-
-        {/* <!-- Right: Login Form --> */}
+      
         <div class="lg:p-36 md:p-52 sm:20 p-8 w-full lg:w-1/2">
+        <div class=" lg:block">
+         <img src="../assets/logo.png"
+          alt="img" class="object-cover w-full h-full" /> 
+        </div>
           <h2 class="text-6xl font-semibold mb-4 text-left custom-heading">Welcome back</h2> 
           <h4 class="text-1xl font-semibold mb-4 text-left custom-tagline">You need to be signed in to access the project dashboard.</h4> 
           <form action="#" method="POST">
-            {/* <!-- Username Input --> */}
+    
             <div class="mb-4 ">
-              {/* <label for="username" class="block text-gray-600 text-left mb-2 input-custom-field">Email or username</label> */}
+              <label for="username" class="block text-gray-600 text-left mb-2 input-custom-field">Email or username</label>
               <input
                 type="text"
                 id="username"
@@ -86,9 +88,8 @@ export default function SignInForm() {
             </div>
             {/* <!-- Password Input --> */}
             <div class="mb-4">
-              {/* <label for="password" class="block text-gray-600 text-left mb-2 input-custom-field">Password</label> */}
-              {/* <input type="password" id="password" name="password" class="w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:border-blue-500" autocomplete="off" />
-               */}
+              <label for="password" class="block text-gray-600 text-left mb-2 input-custom-field">Password</label>
+            
 
               <div class="relative  ">
              
@@ -190,9 +191,7 @@ export default function SignInForm() {
               </div>
             </div>
             {error && <div className="custom-btn" style={{ color: 'red' }}>{error}</div>}
-            {/* <!-- Forgot Password Link --> */}
-
-            {/* <!-- Login Button --> */}
+        
             {/* <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-md py-2 px-4 w-full">Login</button> */}
             <button
               type="submit"
@@ -200,11 +199,11 @@ export default function SignInForm() {
               class=" text-black font-semibold rounded-md py-2 px-4 w-full custom-btn sign-btn"
               disabled={loading}
             >
-              {/* Login */}
+           
               {loading ? 'Logging in...' : 'Sign in'}
             </button>
           </form>
-          {/* <!-- Sign up  Link --> */}
+
         
 
           <button type="button" class="text-gray-900 google-btn bg-white hover:bg-gray-100 border border-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-600 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700 me-2 mb-2">
@@ -216,13 +215,14 @@ export default function SignInForm() {
             </svg>
             Sign in with Google
           </button>
-          {/* <!-- Sign up  Link --> */}
+       
           <div class="mt-6 text-blue-500 text-center sign-text">
             <a href="#" class=" custom-btn hover:underline">Haven’t joined yet? <span className='underline'>Sign in</span> </a>
           </div>
         </div>
         <div class="w-1/2 h-screen hidden lg:block">
-          {/* <img src="https://placehold.co/800x/667fff/ffffff.png?text=Your+Image&font=Montserrat" alt="Placeholder Image" class="object-cover w-full h-full" /> */}
+         <img src="../assets/Right.png"
+          alt="Placeholder Image" class="object-cover w-full h-full" /> 
         </div>
       </div>
     </>
