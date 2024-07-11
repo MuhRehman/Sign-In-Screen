@@ -1,7 +1,7 @@
 import { useState, useContext } from "react";
 import React from "react";
 import { AuthContext } from "../context/AuthContext";
-import mainLogo from'../assets/logo.png';
+import mainLogo from'../assets/mainlogo.svg';
 import rightBanner from'../assets/Right.png';
 
 export default function SignInForm() {
@@ -65,18 +65,20 @@ export default function SignInForm() {
 
   return (
     <>
-      <div class="bg-gray-100 flex justify-center items-center h-screen">
+      <div class="bg-white-100 flex justify-center items-center h-screen">
       
-        <div class="lg:p-36 md:p-52 sm:20 p-8 w-full lg:w-1/2">
-        <div class=" lg:block">
+        <div class="lg:pl-40  lg:pr-40  pl-4 pr-4 sm:pl-6 sm:pr-6 md:pl-8 md:pr-8 lg:pl-10 lg:pr-10  md:p-2 sm:20  w-full lg:w-1/2">
+        <div class=" lg:block mb-6">
          <img src={mainLogo}  alt="img" class="mb-4" /> 
+         
+       
         </div>
-          <h2 class="text-6xl font-semibold mb-4 text-left custom-heading">Welcome back</h2> 
+          <h2 class="text-6xl font-semibold mb-4 text-left custom-heading">Welcome<br/> back</h2> 
           <h4 class="text-1xl font-semibold mb-4 text-left custom-tagline">You need to be signed in to access the project dashboard.</h4> 
           <form action="#" method="POST">
     
             <div class="mb-4 ">
-              <label for="username" class="block text-gray-600 text-left mb-2 input-custom-field">Email or username</label>
+              <label for="username" class="block text-gray-600 text-left mb-1 input-custom-field">Email or username</label>
               <input
                 type="text"
                 id="username"
@@ -89,7 +91,7 @@ export default function SignInForm() {
             </div>
             {/* <!-- Password Input --> */}
             <div class="mb-4">
-              <label for="password" class="block text-gray-600 text-left mb-2 input-custom-field">Password</label>
+              <label for="password" class="block text-gray-600 text-left mb-1 input-custom-field">Password</label>
             
 
               <div class="relative  ">
@@ -186,7 +188,7 @@ export default function SignInForm() {
                 </label>
               </div>
               <div class="mb-4 text-black-500 underline ">
-                <a href="#" class="hover:underline">
+                <a href="#" class="hover:underline forgot-text">
                   Forgot Password?
                 </a>
               </div>
@@ -218,7 +220,7 @@ export default function SignInForm() {
           </button>
        
           <div class="mt-6 text-blue-500 text-center sign-text">
-            <a href="#" class=" custom-btn hover:underline">Haven’t joined yet? <span className='underline'>Sign in</span> </a>
+            <a href="#" class=" custom-text hover:underline">Haven’t joined yet? <span className='underline'>Sign in</span> </a>
           </div>
         </div>
         <div class="w-1/2 h-screen hidden lg:block">
