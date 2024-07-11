@@ -207,7 +207,7 @@ export default function SignInForm() {
           {/* <!-- Sign up  Link --> */}
         
 
-          <button type="button" class="text-gray-900 bg-white hover:bg-gray-100 border border-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-600 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700 me-2 mb-2">
+          <button type="button" class="text-gray-900 google-btn bg-white hover:bg-gray-100 border border-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-600 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700 me-2 mb-2">
           <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M19.3 10.2084C19.3 9.55837 19.2417 8.93337 19.1333 8.33337H10.5V11.8792H15.4333C15.2208 13.025 14.575 13.9959 13.6042 14.6459V16.9459H16.5667C18.3 15.35 19.3 13 19.3 10.2084Z" fill="#4285F4"/>
             <path d="M10.5 19.1667C12.975 19.1667 15.05 18.3459 16.5667 16.9459L13.6042 14.6459C12.7833 15.1959 11.7333 15.5209 10.5 15.5209C8.1125 15.5209 6.09167 13.9084 5.37083 11.7417H2.30833V14.1167C3.81667 17.1125 6.91667 19.1667 10.5 19.1667Z" fill="#34A853"/>
