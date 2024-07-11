@@ -1,6 +1,8 @@
 import { useState, useContext } from "react";
 import React from "react";
 import { AuthContext } from "../context/AuthContext";
+import mainLogo from'../assets/logo.png';
+import rightBanner from'../assets/Right.png';
 
 export default function SignInForm() {
   const [showPassword, setShowPassword] = useState(false);
@@ -67,8 +69,7 @@ export default function SignInForm() {
       
         <div class="lg:p-36 md:p-52 sm:20 p-8 w-full lg:w-1/2">
         <div class=" lg:block">
-         <img src="../assets/logo.png"
-          alt="img" class="object-cover w-full h-full" /> 
+         <img src={mainLogo}  alt="img" class="mb-4" /> 
         </div>
           <h2 class="text-6xl font-semibold mb-4 text-left custom-heading">Welcome back</h2> 
           <h4 class="text-1xl font-semibold mb-4 text-left custom-tagline">You need to be signed in to access the project dashboard.</h4> 
@@ -190,7 +191,7 @@ export default function SignInForm() {
                 </a>
               </div>
             </div>
-            {error && <div className="custom-btn" style={{ color: 'red' }}>{error}</div>}
+            {error && <div className="custom-btn mb-4" style={{ color: 'red' }}>{error}</div>}
         
             {/* <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-md py-2 px-4 w-full">Login</button> */}
             <button
@@ -221,7 +222,7 @@ export default function SignInForm() {
           </div>
         </div>
         <div class="w-1/2 h-screen hidden lg:block">
-         <img src="../assets/Right.png"
+         <img src={rightBanner}
           alt="Placeholder Image" class="object-cover w-full h-full" /> 
         </div>
       </div>
