@@ -121,8 +121,8 @@
     border-radius: 2px 0px 0px 0px;
     border: 1px 0px 0px 0px;
     opacity: 0px;
-    background: #50F89A;
-    color: #005237;
+    background: #50F89A !important;
+    color: #005237 !important;
     margin-bottom: 12px;
     font-family: "Sora-Medium";
     font-size: 16px;
