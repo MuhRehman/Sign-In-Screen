@@ -90,6 +90,7 @@
     font-weight: 300;
     line-height: 28px;
     text-align: left;
+    color: #3B4752;
 }
 
 .input-custom-field {
@@ -98,8 +99,16 @@
     font-weight: 500;
     line-height: 32px;
     text-align: left;
+    color: #222B33;
 }
+.forgot-text {
+    font-family: "PublicSans-Medium";
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: right;
 
+}
 .sign-text a {
     color: black !important;
 }
@@ -122,9 +131,28 @@
     text-align: center;
 }
 
+.custom-text span {
+    font-family: "PublicSans-Medium";
+font-size: 16px;
+font-weight: 500;
+line-height: 28px;
+text-align: center;
+
+}
+.custom-text {
+    
+    font-family: "PublicSans-Light";
+font-size: 16px;
+font-weight: 300;
+line-height: 28px;
+text-align: center;
+color: #3B4752;
+
+}
 .google-btn {
-    width: Fill (421px)px;
-    height: Fixed (48px)px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
     padding: 14px 12px 14px 12px;
     gap: 10px;
     border-radius: 2px 0px 0px 0px;
