@@ -200,7 +200,7 @@ export default function SignInForm() {
               class=" text-black font-semibold rounded-md py-2 px-4 w-full custom-btn sign-btn"
               disabled={loading}
             >
-              {/* Login */}
+            
               {loading ? 'Logging in...' : 'Sign in'}
             </button>
           </form>
