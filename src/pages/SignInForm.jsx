@@ -245,12 +245,12 @@ export default function SignInForm() {
                 fill="#EA4335"
               />
             </svg>
-            Sign in with Googles 
+            Sign in with Google
           </button>
 
           <div class="mt-6 text-blue-500 text-center sign-text">
             <a href="#" class=" custom-text hover:underline">
-              Haven’t joined yet? <span className="underline">Sign in</span>{" "}
+              Haven’t join yet? <span className="underline">Sign in</span>{" "}
             </a>
           </div>
         </div>
