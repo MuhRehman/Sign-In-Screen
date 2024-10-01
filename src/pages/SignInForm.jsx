@@ -251,7 +251,7 @@ export default function SignInForm() {
 
           <div class="mt-6 text-blue-500 text-center sign-text">
             <a href="#" class=" custom-text hover:underline">
-              Haven’t join yet? <span className="underline">Sign in</span>{" "}
+              Haven’t joined yet? <span className="underline">Sign in</span>{" "}
             </a>
           </div>
         </div>
