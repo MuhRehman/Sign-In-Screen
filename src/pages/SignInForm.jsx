@@ -212,6 +212,7 @@ export default function SignInForm() {
               onClick={handleSubmit}
               class=" text-black font-semibold rounded-md py-2 px-4 w-full custom-btn sign-btn"
               disabled={loading}
+              alt="SiGn In button"
             >
               {loading ? "Logging in..." : "Sign in"}
             </button>
