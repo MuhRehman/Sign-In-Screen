@@ -245,7 +245,7 @@ export default function SignInForm() {
                 fill="#EA4335"
               />
             </svg>
-            Sign in with Google
+            Sign in with Googles 
           </button>
 
           <div class="mt-6 text-blue-500 text-center sign-text">
